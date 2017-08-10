@@ -5,7 +5,8 @@ def get_password_strength(password):
     k = 1
     if len(set(string.digits).intersection(password)) > 0:
         k += 3
-    if len(set(string.ascii_letters).intersection(password)) > 0:
+    if ((len(set(string.ascii_lowercase).intersection(password)) > 0) and
+            (len(set(string.ascii_uppercase).intersection(password)) > 0)):
         k += 3
     if len(set("~`!@#$%^&*()_-+={}[]:>;',</?*-+").intersection(password)) > 0:
         k += 3
@@ -14,5 +15,5 @@ def get_password_strength(password):
 
 if __name__ == '__main__':
     _password = input('Enter password: ')
-    print('Security level of your password:')
+    print('Password strength: ')
     print(get_password_strength(_password))
