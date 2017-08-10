@@ -2,15 +2,15 @@ import string
 
 
 def get_password_strength(password):
-    k = 1
-    if len(set(string.digits).intersection(password)) > 0:
-        k += 3
-    if ((len(set(string.ascii_lowercase).intersection(password)) > 0) and
-            (len(set(string.ascii_uppercase).intersection(password)) > 0)):
-        k += 3
-    if len(set("~`!@#$%^&*()_-+={}[]:>;',</?*-+").intersection(password)) > 0:
-        k += 3
-    return k
+    pass_str_lvl = 1
+    if len(set(string.digits).intersection(password)):
+        pass_str_lvl += 3
+    if (len(set(string.ascii_lowercase).intersection(password)) and
+            len(set(string.ascii_uppercase).intersection(password))):
+        pass_str_lvl += 3
+    if len(set("~`!@#$%^&*()_-+={}[]:>;',</?*-+").intersection(password)):
+        pass_str_lvl
+    return pass_str_lvl
 
 
 if __name__ == '__main__':
