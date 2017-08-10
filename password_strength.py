@@ -9,7 +9,7 @@ def get_password_strength(password):
             len(set(string.ascii_uppercase).intersection(password))):
         pass_str_lvl += 3
     if len(set("~`!@#$%^&*()_-+={}[]:>;',</?*-+").intersection(password)):
-        pass_str_lvl
+        pass_str_lvl += 3
     return pass_str_lvl
 
 
