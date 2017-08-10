@@ -1,6 +1,21 @@
 # Password Strength Calculator
 
-[TODO. There will be project description]
+Check security level of your password
+
+# Requirements 
+
+Python 3.5
+
+# Quickstart
+
+Clone project from github and start it from concole (example for Windows 7):
+
+```bash
+python tests.py # or python3 maybe
+```
+```bash
+filepath of file
+```
 
 # Project Goals
 
